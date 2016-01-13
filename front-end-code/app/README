@@ -1,0 +1,14 @@
+//assumption - npm, grunt are installed in system
+1. set application's root path to app folder in console(for running front-end server using grunt)
+
+2. Run grunt serve / sudo grunt serve in console (path pointing to app folder)
+
+3. Start ruby server at localhost:3000
+
+4. goto http://localhost:9000/
+
+
+#for a fresh project
+Run npm install (dependencies are currently there in node_modules, so application will run without npm install)
+
+Run grunt for compiling any live change in scss file to css (final css is currently there, so  style.css will work without grunt )

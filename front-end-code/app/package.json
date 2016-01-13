@@ -1,0 +1,18 @@
+{
+  "name": "test",
+  "dependencies": {
+    "angular": "1.4.8",
+    "angular-resource":"1.4.8",
+    "angular-chart.js": "^0.8.8",
+    "angular-ui-router": "0.2.13",
+    "bootstrap": "3.3.6",
+    "jquery": "2.1.4",
+    "angular-spinners":"3.0.4"
+  },
+  "devDependencies": {
+    "grunt": "0.4.1",
+    "grunt-contrib-sass": "git+https://github.com/gruntjs/grunt-contrib-sass.git#e85ee70ccb8839867172b57ca1378293291f8037",
+    "grunt-contrib-watch": "0.4.4",
+    "grunt-connect": "0.2.0"
+  }
+}

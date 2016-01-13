@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+<link>
+<title>Surveys</title>
+<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+</link>
+<link rel="stylesheet" href="node_modules/angular-chart.js/dist/angular-chart.css">
+<link href="assets/styles/style.css" rel="stylesheet" type="text/css">
+</link>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body ng-app="ngApp">
+
+
+<div class="application-box">
+    <span class="application-header"><img class="application-logo"
+                                          src="assets/images/logo.png">Survey Results.com</span>
+    <spinner name="html5spinner">
+        <div class="overlay"></div>
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+        <div class="please-wait">Please Wait...</div>
+    </spinner>
+    <div class="application-content" ui-view>
+        <!-- angular view -->
+    </div>
+
+
+</div>
+
+<!-- dependencies-->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-resource/angular-resource.min.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="ngapp/scripts/vender/Chart.js"></script>
+<script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+<script src="node_modules/angular-spinners/dist/angular-spinners.js"></script>
+
+<!-- script files -->
+<script src="ngapp/scripts/app.js"></script>
+<script src="ngapp/scripts/directives.js"></script>
+<script src="ngapp/scripts/services.js"></script>
+<script src="ngapp/scripts/interceptor-service.js"></script>
+<script src="ngapp/sections/available-surveys/surveys-overview-controller.js"></script>
+<script src="ngapp/sections/survey-details/survey-details-controller.js"></script>
+</body>
+</html>

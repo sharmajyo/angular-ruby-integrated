@@ -1,0 +1,28 @@
+<div class="survey-overview center-block">
+
+    <h4>Great news!! the survey results have arrived.</h4>
+
+    <div class="container-box" ng-show="availableSurveys && availableSurveys.length > 0">
+        <div class="well center-block">
+
+            <h5 class="info-text">Click any survey to view it.</h5>
+            <button type="button" class="btn btn-default btn-lg btn-block" ng-repeat="survey in availableSurveys"
+                    ng-click="viewSurvey(survey)">
+                {{survey.name}}
+            </button>
+        </div>
+
+        <div class="response-graph">
+            <canvas id="bar" class="chart chart-bar" chart-legend="true"
+                    colours="chartDataSet.colours"
+                    chart-options="{barMaxWidth:100,barValueSpacing:10,barWidth:20,
+            scaleShowGridLines : false,
+            legendTemplate:'<br><i>** Survey response rate in percentage</i></br>'}"
+                    chart-data="chartDataSet.chartData" chart-labels="chartDataSet.labels"
+                    chart-series="chartDataSet.series">
+            </canvas>
+        </div>
+    </div>
+    <div ng-hide="availableSurveys && availableSurveys.length > 0">Sorry no survey results found.</div>
+</div>
+

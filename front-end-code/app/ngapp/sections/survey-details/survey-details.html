@@ -1,0 +1,39 @@
+<div class="survey-details" ng-show="surveyDetail">
+    <div class="well">
+        <a class="back-btn" ui-sref="surveys-overview">Back</a>
+        <span class="place-inline">
+            <div>
+                <label class="form-lebel">Survey name:</label><label class="survey-name">{{surveyDetail.name}}</label>
+            </div>
+            <div>
+                <label class="form-lebel">Participation rate:</label><label class="participation-rate">{{responseRate}}%</label>
+            </div>
+        </span>
+        <span class="place-inline survey-pi">
+            <canvas id="pie" class="chart chart-pie"
+                    chart-data="chartDataSet.data" chart-labels="chartDataSet.labels"
+                    chart-legend="true"
+                    chart-options="{legendTemplate:'Theme ratings based on survey ques'}">
+            </canvas>
+        </span>
+    </div>
+
+
+    <div class="survey-theme" ng-repeat="theme in surveyDetail.themes">
+        <div class="theme-name">
+            <label>Theme:</label><label class="name">{{theme.name}}</label>
+        </div>
+
+        <ol class="survey-questions">
+            <li class="question" ng-repeat="que in theme.questions">{{que.description}}
+                <div responses="que.survey_responses">
+                    <average-star-rating ng-model="que.que_ratings" max="5"
+                                         user-responded="que.userResponded"></average-star-rating>
+                </div>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div ng-hide="surveyDetail">Sorry no survey details found.</div>
+

@@ -1,0 +1,14 @@
+<div class='average-rating-container'>
+    <ul class='rating background' class='readonly'>
+          <li ng-repeat='star in stars' class='star'>
+                <i class='fa fa-star'></i> &#9733
+              </li>
+        </ul>
+    <ul class='rating foreground' class='readonly' ng-style="{width:filledInStarsContainerWidth}">
+          <li ng-repeat='star in stars' class='star filled'>
+                <i class='fa fa-star'></i> &#9733
+              </li>
+
+        </ul>
+    <span class="rating-text">Average rating {{averageRatingValue}} based on {{userResponded}} reviews</span>
+</div>
